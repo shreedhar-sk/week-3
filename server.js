@@ -1,28 +1,30 @@
-//console.log("Hello Everyone");
-const express = require("express");
-const mongoose =require("mongoose");
-const routes=require("./Routes/route");
 
-const app=express();
+    //console.log("hello everyone");
+const express = require("express");
+const mongoose = require("mongoose");
+const routes = require("./router/route");
+
+const app = express();
 app.use(express.json());
 
-app.use("/",routes);
-//Db connection
+app.use("/", routes);
+
 mongoose
 .connect(
-    "mongodb+srv://ankushrp2004:ankush123@cluster0.nvbesvi.mongodb.net/internship-batch3"
-)
-.then(()=>{
-    console.log("Database is connected successfully");
+    "mongodb+srv://shreedharcs22:shree+412@cluster0.mx7ypmw.mongodb.net/"
+    )
+.then(() => {
+    console.log("Database is connected Succesefully");
 })
-.catch((err)=>{
+.catch( (err)=>{
     console.log(err,"something went wrong");
-})
-//Test Api
+} );
+
+
 app.get("/test",(req,res)=>{
-    res.send("Hello Everyone, This is Test Api ");
+    res.send("Hello EveryOne, This is Test Api");
 });
 
-app.listen(5000,()=>{
-    console.log("Server is running on port 5000");
+app.listen(4000,()=>{
+    console.log("Server Is Running on port 4000");
 });

@@ -1,0 +1,10 @@
+node js is runtime env of js which executes javascript code outside the browser 
+
+for init npm -y
+
+Http methods -
+Get- read date
+Post- create post 
+Put- update data
+Delete-delete data
+
